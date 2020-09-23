@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Student Info{% endblock %}
+{% block body %}
+    <h1>Name: {{Student.name}}</h1>
+    <h1>Fire Drill Number: {{Student.firedrillnumber}}</h1>
+    <h1>Assignments</h1>
+    <ul>
+        {% for work in Work %}
+            <li>{{ work.name }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
